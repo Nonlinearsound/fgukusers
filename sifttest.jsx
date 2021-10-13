@@ -19,5 +19,5 @@ serve({
     const post = `Hello, you visited ${params.slug}!`;
     return new Response(post);
   },
-  "/:filename+": serveStatic("public", { baseUrl: import.meta.url }),
+  "/test": serveStatic("public/test.html", { baseUrl: import.meta.url }),
 });
