@@ -1,4 +1,4 @@
-import { h, jsx, serve } from "https://deno.land/x/sift@0.3.5/mod.ts";
+import { h, jsx, serve, serveStatic } from "https://deno.land/x/sift@0.3.5/mod.ts";
 
 const App = () => (
   <div>
@@ -19,4 +19,5 @@ serve({
     const post = `Hello, you visited ${params.slug}!`;
     return new Response(post);
   },
+  "/:filename+": serveStatic("public", { baseUrl: import.meta.url }),
 });
