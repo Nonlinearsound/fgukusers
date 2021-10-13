@@ -15,4 +15,8 @@ const NotFound = () => (
 serve({
   "/": () => jsx(<App />),
   404: () => jsx(<NotFound />, { status: 404 }),
+  "/blog/:slug": (request, params) => {
+    const post = `Hello, you visited ${params.slug}!`;
+    return new Response(post);
+  },
 });
