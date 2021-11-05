@@ -2,7 +2,7 @@ import { h, jsx, serve, serveStatic } from "https://deno.land/x/sift@0.3.5/mod.t
 
 const App = () => (
   <div>
-    <h1>Hello world!</h1>
+    <h1>Hello world from duftetest.jsx!</h1>
   </div>
 );
 
